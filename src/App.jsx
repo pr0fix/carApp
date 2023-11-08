@@ -5,7 +5,7 @@ export default function App() {
 
   return (
     <>
-      <AppBar position='fixed'>
+      <AppBar position='static'>
         <Typography variant='h6'>
           Carshop
         </Typography>
