@@ -1,6 +1,6 @@
 import { Button, Dialog, DialogContent, DialogTitle, DialogActions, TextField  } from "@mui/material";
 import { useState } from "react";
-export default function AddCar(props) {
+export default function EditCar(props) {
 
     const [car, setCar] = useState({brand: '', model: '', color: '', fuel: '', year: '', price: ''});
     const [showDialog, setShowDialog] = useState(false);
