@@ -5,10 +5,14 @@ export default function AddCar(props) {
     const [car, setCar] = useState({brand: '', model: '', color: '', fuel: '', year: '', price: ''});
     const [showDialog, setShowDialog] = useState(false);
 
-    const handleClose = (event, reason) => {
+    const handleCloseDialog = (event, reason) => {
         if(reason != 'backdropClick'){
         setShowDialog(false);
     }
+    }
+
+    const handleShowDialog = () => {
+        setShowDialog(true);
     }
 
 	const handleSave = () => {
@@ -24,10 +28,10 @@ export default function AddCar(props) {
 
     return (
         <>
-            <Button onClick={() => setShowDialog(true)}>New Car</Button>
+            <Button style={{margin: "5px"}} variant="outlined" onClick={handleShowDialog}>New Car</Button>
             <Dialog
             open={showDialog}
-            onClose={handleClose}
+            onClose={handleCloseDialog}
             >
                 <DialogTitle>New Car</DialogTitle>
                 <DialogContent>
@@ -69,7 +73,7 @@ export default function AddCar(props) {
                     />
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose}>Close</Button>
+                    <Button onClick={handleCloseDialog}>Close</Button>
 					<Button onClick={handleSave}>Save</Button>
                 </DialogActions>
             </Dialog>

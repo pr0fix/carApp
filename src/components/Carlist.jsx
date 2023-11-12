@@ -23,13 +23,11 @@ export default function Carlist() {
     }
     return (
         <>
-            <h1>Carlist</h1>
             <Cargrid
                 cars={cars}
                 getCars={getCars}
                 restURL={REST_URL}
             />
-            
         </>
     )
 }
